@@ -1,22 +1,30 @@
-#import nltk
-#nltk.download()
-#tokenizing - word.... sentence tokenizers
-#lexicon and corporas
-#corpora - body of text. ex. medical jounals, presidential speeches, English language
-#lexicon - words and their means
+# #import nltk
+# #nltk.download()
+# #tokenizing - word.... sentence tokenizers
+# #lexicon and corporas
+# #corpora - body of text. ex. medical jounals, presidential speeches, English language
+# #lexicon - words and their means
 
-#investor-speak.... regular english-speak
-
-
-#Investor speak 'bull' - someone who is positive about the market
-#english-speak 'bull' = scary animal u don't want running @ u
-from nltk.tokenize import sent_tokenize, word_tokenize
+# #investor-speak.... regular english-speak
 
 
-example = "Hello Mr.Samwel, how are you doing today? The weather is great and python is awesome. the sky is pinkish-blue you should not eat card board"
+# #Investor speak 'bull' - someone who is positive about the market
+# #english-speak 'bull' = scary animal u don't want running @ u
+# from nltk.tokenize import sent_tokenize, word_tokenize
 
-#print(sent_tokenize(example))
-#print(word_tokenize(example))
 
-for i in word_tokenize(example):
-    print(i)
+# example = "some funny text"
+
+# #print(sent_tokenize(example))
+# #print(word_tokenize(example))
+
+# for i in word_tokenize(example):
+#     print(i)
+import os
+os.chdir("D:\\Music\\english")
+files = os.listdir()
+for file in files:
+	if "1" and '0' in file:
+		print('file contains numbers '+ file)
+	else:
+		print(file)
