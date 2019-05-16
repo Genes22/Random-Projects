@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{287FEAAE-6048-4A05-BC39-6A0B85DC6B49}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>VBconsoleCalculator.Module1</StartupObject>
+    <StartupObject>VBconsoleCalculator.vbCalculator</StartupObject>
     <RootNamespace>VBconsoleCalculator</RootNamespace>
     <AssemblyName>VBconsoleCalculator</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -69,7 +69,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="vbCalculator.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
