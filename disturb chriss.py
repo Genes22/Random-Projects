@@ -1,4 +1,5 @@
 from selenium import webdriver
+from nltk.tokenize import word_tokenize
 import random
 import time
 
@@ -9,14 +10,15 @@ url = 'https://web.whatsapp.com/'
 #Opening chrome tab and the url
 driver = webdriver.Chrome()
 driver.get(url)
-time.sleep(10)
+time.sleep(8)
 area =driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
-value = random.randint(0,10000)
-
+words  = word_tokenize(text)
+time.sleep(3)
 #vote 10 times on the selected option and delete the cookies after that@@
 for i in range(10000):
 	time.sleep(1)
 	area.click()
-	value = random.randint(0,10000)
+	rint = random.randint(1,200)
+	value = words[rint]
 	area.send_keys(value)
 	area.send_keys(u'\ue007')

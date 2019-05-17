@@ -6,10 +6,8 @@
 # #lexicon - words and their means
 
 # #investor-speak.... regular english-speak
-
-
-# #Investor speak 'bull' - someone who is positive about the market
-# #english-speak 'bull' = scary animal u don't want running @ u
+# #Investor speak 'bull' - trading meaning market information
+# #english-speak 'bull' = big animal u don want it running @ u
 # from nltk.tokenize import sent_tokenize, word_tokenize
 
 
