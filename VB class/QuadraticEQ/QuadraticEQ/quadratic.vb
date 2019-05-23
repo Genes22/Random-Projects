@@ -14,7 +14,7 @@
             c = Console.ReadLine()
 
             If a = 0 Then
-                Console.WriteLine("The value of A cannot be 0 in Quadratic equations")
+                Console.WriteLine("No solution.!!.." + vbLf + "The value of A cannot be 0 in Quadratic equations")
             Else
                 num = Math.Sqrt((b ^ 2) - (4 * a * c))
                 If num > 0 Then
