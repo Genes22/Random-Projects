@@ -19,13 +19,18 @@
         result = num1 / num2
         Return result
     End Function
+
+    Function Remainder(ByRef num1 As Double, ByRef num2 As Double) As Double
+        result = num1 Mod num2
+        Return result
+    End Function
     Sub Main()
         Do
             Dim num1, num2, num3 As Double
             Dim operation, result As String
             Console.Write("Enter the first number: ")
             num1 = Console.ReadLine()
-            Console.WriteLine("Enter the operation you want to perform: " + vbLf + " + : " + vbLf + " - : " + vbLf + " * : " + vbLf + "/ :")
+            Console.WriteLine("Enter the operation you want to perform: " + vbLf + " + : " + vbLf + " - : " + vbLf + " * : " + vbLf + "/ : " + vbLf + "% : ")
             operation = Console.ReadLine()
             Console.Write("Enter the second number: ")
             num2 = Console.ReadLine()
@@ -41,6 +46,9 @@
                 Case "*"
                     result = Multiplication(num1, num2)
                     Console.WriteLine("The product of {0} and {1} is: {2}" + vbLf, num1, num2, result)
+                Case "%"
+                    result = Remainder(num1, num2)
+                    Console.WriteLine("The Remainder of {0} divided by {1} is: {2}" + vbLf, num1, num2, result)
                 Case "/"
                     If num2 = 0 Then
                         Console.WriteLine("the second number cannot be zero " + vbLf)
