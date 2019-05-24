@@ -7,7 +7,7 @@ driver = webdriver.Chrome()
 driver.get(url)
 
 #vote 100 times on the selected option and delete the cookies after that@@
-for i in range(100):
+for i in range(1000):
 	driver.delete_all_cookies()
 	driver.get(url)
 	driver.find_element_by_xpath('//*[@id="voter_landing"]/div[3]/div/div/div/table/tbody/tr/td[1]/a').click()
