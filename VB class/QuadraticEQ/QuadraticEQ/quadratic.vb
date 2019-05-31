@@ -3,7 +3,6 @@
         Do
             Dim a, b, c As Integer
             Dim x1, x2, x, num As Double
-
             Console.WriteLine("Enter a: ")
             a = Console.ReadLine()
 
@@ -14,7 +13,10 @@
             c = Console.ReadLine()
 
             If a = 0 Then
-                Console.WriteLine("No solution.!!.." + vbLf + "The value of A cannot be 0 in Quadratic equations")
+                Do While (a = 0)
+                    Console.WriteLine("Enter a: ")
+                    a = Console.ReadLine()
+                Loop
             Else
                 num = Math.Sqrt((b ^ 2) - (4 * a * c))
                 If num > 0 Then
