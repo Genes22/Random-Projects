@@ -1,25 +1,20 @@
 ﻿Module grading
     Sub Main()
-        Dim name(3), grade, remark As String
-        Dim subject1(3), Subject2(3), subject3(3), subject4(3), subject5(3) As Double
+        Dim name(0, 3), grade, remark As String
+        Dim subject(0,3) As Double
         Dim sum, average As Double
 
         For i = 0 To name.Length - 1
             Console.Write("Please enter a student{0} name: ", i + 1)
-            name(i) = Console.ReadLine()
-            Console.Write("Enter marks for subject1: ")
-            subject1(i) = Console.ReadLine()
-            Console.Write("Enter marks for subject2: ")
-            Subject2(i) = Console.ReadLine()
-            Console.Write("Enter marks for subject3: ")
-            subject3(i) = Console.ReadLine()
-            Console.Write("Enter marks for subject4: ")
-            subject4(i) = Console.ReadLine()
-            Console.Write("Enter marks for subject5: ")
-            subject5(i) = Console.ReadLine()
+            name(0, i) = Console.ReadLine()
+            For n = 0 To name.Length - 1
+                Console.Write("Enter marks for subject{0}:", n + 1)
+                subject(0, n) = Console.ReadLine()
+            Next
         Next
+
         For n = 0 To name.Length - 1
-            sum = subject1(n) + Subject2(n) + subject3(n) + subject4(n) + subject5(n)
+            sum = subject(0,0) + Subject(0,1) + subject(0,2) + subject(0,3)
             average = sum / 5
             If (average >= 81 And average <= 100) Then
                 grade = "A"
@@ -38,7 +33,8 @@
                 remark = "Poor"
             End If
 
-            Console.WriteLine(vbLf + "The results of: " + name(n) + " Sum is: " + CStr(sum) + " and Average is: " + CStr(average) + " Grade: " + grade + " Remark: " + remark + vbLf)
+            Console.WriteLine(vbLf + "The results of:  subject1:  subject2:   subject3:  subject4:   Sum:  Average:   Grade:   Remark: " + vbLf)
+            Console.WriteLine(vbLf + name(0, n) + " " + CStr(sum) + "  " + CStr(subject(0, 0)) + "   " + CStr(subject(0, 1)) + "  " + CStr(subject(0, 2)) + "  " + CStr(subject(0, 3)) + "  " + CStr(sum) + "  " + CStr(average) + "  " + CStr(grade) + "  " + CStr(remark) + vbLf)
         Next
         Console.ReadLine()
     End Sub
