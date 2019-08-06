@@ -10,7 +10,7 @@ url = 'https://web.whatsapp.com/'
 #Opening chrome tab and the url
 driver = webdriver.Chrome()
 driver.get(url)
-time.sleep(15)
+time.sleep(5)
 print('You have 10 secs to scan the code in your browse and click on the chat you want to disturb')
 area =driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
 words  = word_tokenize(text)
